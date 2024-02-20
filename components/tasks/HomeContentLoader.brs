@@ -60,9 +60,11 @@ sub LoadHomeContent()
 end sub
 
 function RetrieveTileData(tileData as object, contentClass as string) as object
+  isCollection = tileData.type = "StandardCollection"
+
   ' Check if the content is available, this is a simplified check but should check against the current user's region
   ' Also check that the content is a collection of shows/movies because collections will not have an availability
-  if tileData.currentAvailability <> invalid or tileData.currentAvailability = invalid and contentClass <> "editorial"
+  if tileData.currentAvailability <> invalid or isCollection
     tileImageData = tileData.image.tile["1.78"]
     tile = {}
     foundTileData = invalid
@@ -103,6 +105,7 @@ function RetrieveTileData(tileData as object, contentClass as string) as object
           tile.contentType = contentType
           tile.ratings = tileData.ratings
           tile.releases = tileData.releases
+          tile.isCollection = isCollection
 
           ' For this use case we're going to use video art as a preview on the details screen
           if tileData.videoArt <> invalid and tileData.videoArt.Count() > 0

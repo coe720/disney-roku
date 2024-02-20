@@ -29,8 +29,15 @@ sub PopulateContentDetails(content as object)
     ' end if
 
     m.poster.uri = content.tileUrl
-    m.ratingLabel.text = content.ratings[0].value
-    m.releaseYearLabel.text = content.releases[0].releaseYear
+
+    ' if we're a collection then we can show ratings and release info
+    if content.isCollection <> true
+        m.ratingLabel.text = content.ratings[0].value
+        m.releaseYearLabel.text = content.releases[0].releaseYear
+    else
+        m.ratingLabel.visible = false
+        m.releaseYearLabel = false
+    end if
 end sub
 
 ' Invoke when the selected item is updated

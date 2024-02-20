@@ -15,7 +15,7 @@
             numRows="5"
             rowitemSize="[[320,180]]"
             rowItemSpacing="[[20,0]]"
-            itemSize="[1100,270]"
+            itemSize="[1500,270]"
             rowLabelOffset="[[50,20]]"
             focusXOffset="[50]"
             showRowLabel="[true]"

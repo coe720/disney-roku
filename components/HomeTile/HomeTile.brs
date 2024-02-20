@@ -3,7 +3,7 @@ sub Init()
 end sub
 
 sub OnContentSet()
-    content = m.top.tileContent
+    content = m.top.itemContent
     ' Set poster URI if content is valid
     if content <> invalid
         m.poster.uri = content.tileUrl
