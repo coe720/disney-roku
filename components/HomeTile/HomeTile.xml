@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="HomeTile" extends="Group" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <interface>
+      <field id="tileContent" type="node" onChange="OnContentSet" />
+      <field id="focusPercent" type="float" onChange="OnFocus"/>
+    </interface>
+    <script type="text/brightscript" uri="HomeTile.brs" />
+    <children>
+        <Poster
+            id="poster"
+            translation = "[ 10, 10 ]"
+            loadDisplayMode="scaleToFit"
+            width="320"
+            height="180"
+            loadWidth="320"
+            loadHeight="180"
+            scaleRotateCenter = "[ 160.0, 90.0 ]" 
+        />
+    </children>
+</component>

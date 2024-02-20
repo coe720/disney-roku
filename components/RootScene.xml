@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<component name="RootScene" extends="Scene">
+    <script type="text/brightscript" uri="RootScene.brs" />
+    <script type="text/brightscript" uri="UIControllers/RootSceneController.brs" />
+    <script type="text/brightscript" uri="UIControllers/HomeSceneController.brs" />
+    <script type="text/brightscript" uri="UIControllers/ScreenStackController.brs" />
+    <script type="text/brightscript" uri="UIControllers/LoadingController.brs" />
+    <script type="text/brightscript" uri="UIControllers/ContentDetailsScreenController.brs" />
+    <interface>
+        <field id="leaveChannel" type="bool" alwaysnotify="true" value="false"/>
+    </interface>
+    <children>
+        <BusySpinner
+            id="loadingSpinner"
+            translation="[570, 300]"
+            control="start"
+            clockwise="true"
+            spinInterval="1"
+        />
+    </children>
+</component>

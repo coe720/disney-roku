@@ -1,0 +1,16 @@
+title=Disney+
+major_version=1
+minor_version=0
+build_version=00000
+
+mm_icon_focus_hd=pkg:/images/disney-plus-channel.jpeg
+mm_icon_focus_sd=pkg:/images/disney-plus-channel.jpeg
+
+splash_screen_sd=pkg:/images/disney-plus-channel.jpeg
+splash_screen_hd=pkg:/images/disney-plus-channel.jpeg
+splash_screen_fhd=pkg:/images/disney-plus-channel.jpeg
+
+splash_color=#030508
+splash_min_time=2000
+
+ui_resolutions = "hd"

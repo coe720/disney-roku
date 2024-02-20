@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+
+<component name="ContentDetailsScreen" extends="Group" initialFocus="WatchPreviewButton" xsi:noNamespaceSchemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+    <script type="text/brightscript" uri="ContentDetailsScreen.brs" />
+    <interface>
+        <field id="content" type="node" />
+        <field id="selectedItem" type="integer" onChange="OnSelectedItem" value="0" alwaysNotify="true" />
+        <field id="itemFocused" type="integer" alwaysNotify="true" />
+    </interface>
+    <children>
+        <LayoutGroup
+            translation="[1166, 154]"
+            layoutDirection="horiz"
+            horizAlignment="right"
+            itemSpacings="[40]">
+            <LayoutGroup
+                itemSpacings="[14, 10]"
+                layoutDirection="vert">
+                <Rectangle
+                    width="357"
+                    height="201"
+                    color="0xFFFFFF00">
+                    <Poster
+                        id="poster"
+                        width="320"
+                        height="180"
+                        loadWidth="320"
+                        loadHeight="180"
+                        loadDisplayMode="scaleToFit"
+                    />
+                </Rectangle>
+            </LayoutGroup>
+            <Group>
+                <LayoutGroup
+                    itemSpacings="[40]"
+                    translation="[0, 208]">
+                    <Label
+                        id="releaseYearLabel"
+                        wrap="false"
+                        width="593"
+                    />
+                    <Label
+                        id="ratingLabel"
+                        wrap="false"
+                        width="520"
+                    />
+                    <!-- We'll re-enable this so we can watch the video art as a preview once the video screen is ready -->
+                    <!-- <Button
+                        id = "WatchPreviewButton"
+                        text = "Watch Preview"
+                        visible = "false"
+                        showFocusFootprint = "true"
+                        minWidth = "240"
+                    /> -->
+                </LayoutGroup>
+            </Group>
+        </LayoutGroup>
+    </children>
+</component>
